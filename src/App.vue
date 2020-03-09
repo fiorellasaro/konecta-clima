@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
+    <v-app-bar v-if="enterState"
       app
       color="primary"
       dark
@@ -10,51 +10,56 @@
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="./assets/k-blanco.png"
           transition="scale-transition"
           width="40"
         />
 
+
         <v-img
-          alt="Vuetify Name"
+          alt="Konecta Name"
           class="shrink mt-1 hidden-sm-and-down"
           contain
           min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          src="./assets/konecta-b.png"
           width="100"
         />
       </div>
-
+      <!-- <h2> - Clima</h2> -->
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+      <formClima v-if="enterState"></formClima>
+      <cardLogin v-else v-on:validate="getEnterState($event)" />
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import cardLogin from './components/cardLogin';
+import formClima from './components/form';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    cardLogin,
+    formClima
   },
 
   data: () => ({
+    enterState: false,
     //
   }),
+  methods: {
+    getEnterState(enter){
+      this.enterState = enter;
+    }
+  }
 };
 </script>
+
+
+
