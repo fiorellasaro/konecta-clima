@@ -10,7 +10,7 @@
           src="../src/assets/k-blanco.png"
           width="40"
         />
-       <b color="white" class="m-0">lima</b> 
+       <b color="white" class="m-0" style="font-size: 25px;">lima</b> 
       </div>
       <!-- <h2> - Clima</h2> -->
       <v-spacer></v-spacer>
