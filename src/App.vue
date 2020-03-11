@@ -3,10 +3,10 @@
     <v-app-bar v-if="enterState" app color="teal" dark>
       <div class="d-flex align-center">
         <v-img
-          alt="Konecta logo"
+          alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="../src/assets/konecta-b.png"
+          src="./assets/konecta-b.png"
           transition="scale-transition"
           width="100"
         />
@@ -18,7 +18,7 @@
           min-width="100"
           src="../src/assets/konecta-b.png"
           width="100"
-        /> -->
+        />-->
       </div>
       <!-- <h2> - Clima</h2> -->
       <v-spacer></v-spacer>
@@ -154,7 +154,7 @@ export default {
     valueRespeto: 0,
     valueImparcialidad: 0,
     valueOrgullo: 0,
-    valueCamaraderia: 0,
+    valueCamaraderia: 0
     //
   }),
   methods: {
