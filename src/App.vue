@@ -2,14 +2,7 @@
   <v-app>
     <v-app-bar v-if="enterState" app color="teal" dark>
       <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="./assets/konecta-b.png"
-          transition="scale-transition"
-          width="100"
-        />
+        <img src="./assets/konecta-b.png" alt="logo Konecta" class="shrink mr-2" width="100">
 
         <!-- <v-img
           alt="Konecta Name"
