@@ -651,7 +651,7 @@ export default {
 
 <style >
 .height {
-  height: 380px !important;
+  height: 360px !important;
 }
 .containerCred {
   width: 100% !important;

@@ -12,6 +12,7 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "gh-pages": "^2.2.0",
+    "material-design-icons-iconfont": "^5.0.1",
     "vue": "^2.6.11",
     "vuetify": "^2.2.11"
   },

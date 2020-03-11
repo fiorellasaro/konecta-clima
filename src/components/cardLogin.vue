@@ -1,7 +1,7 @@
 <template>
    <div class="container">
     <h1>ENCUESTA CLIMA KONECTA</h1>
-    <v-btn x-large color="success" dark @click="validate">EMPEZAR</v-btn>
+    <v-btn x-large color="teal" dark @click="validate">EMPEZAR</v-btn>
    </div>
 
 </template>

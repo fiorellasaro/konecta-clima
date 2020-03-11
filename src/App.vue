@@ -1,19 +1,19 @@
 <template>
   <v-app>
-    <v-app-bar v-if="enterState" app color="primary" dark>
+    <v-app-bar v-if="enterState" app color="teal" dark>
       <div class="d-flex align-center">
-        <v-img
+        <!-- <v-img
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="./assets/k-blanco.png"
+          src="./assets/konecta-b.png"
           transition="scale-transition"
           width="40"
-        />
+        /> -->
 
         <v-img
           alt="Konecta Name"
-          class="shrink mt-1 hidden-sm-and-down"
+          class="shrink"
           contain
           min-width="100"
           src="./assets/konecta-b.png"
@@ -189,6 +189,8 @@ export default {
   justify-content: space-between !important;
   align-items: center !important;
   flex-direction: row;
+  margin-bottom: 1.5em;
+  margin-top: 0.5em;
 }
 
 @media (max-width: 767px) {
