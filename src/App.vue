@@ -1,17 +1,16 @@
 <template>
   <v-app>
     <v-app-bar v-if="enterState" app color="teal" dark>
-      <div class="d-flex align-center">
-        <img src="./assets/konecta-b.png" alt="logo Konecta" class="shrink mr-2" width="100">
-
-        <!-- <v-img
+      <div class="d-flex align-center justify-content-center">
+        <v-img
           alt="Konecta Name"
           class="shrink"
           contain
-          min-width="100"
-          src="../src/assets/konecta-b.png"
-          width="100"
-        />-->
+          transition="scale-transition"
+          src="../src/assets/k-blanco.png"
+          width="40"
+        />
+       <b color="white" class="m-0">lima</b> 
       </div>
       <!-- <h2> - Clima</h2> -->
       <v-spacer></v-spacer>
