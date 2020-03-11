@@ -16,7 +16,7 @@
           class="shrink"
           contain
           min-width="100"
-          src="./assets/konecta-b.png"
+          src="../src/assets/konecta-b.png"
           width="100"
         />
       </div>
