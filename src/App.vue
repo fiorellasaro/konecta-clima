@@ -2,23 +2,23 @@
   <v-app>
     <v-app-bar v-if="enterState" app color="teal" dark>
       <div class="d-flex align-center">
-        <!-- <v-img
-          alt="Vuetify Logo"
+        <v-img
+          alt="Konecta logo"
           class="shrink mr-2"
           contain
-          src="./assets/konecta-b.png"
+          src="../src/assets/konecta-b.png"
           transition="scale-transition"
-          width="40"
-        /> -->
+          width="100"
+        />
 
-        <v-img
+        <!-- <v-img
           alt="Konecta Name"
           class="shrink"
           contain
           min-width="100"
           src="../src/assets/konecta-b.png"
           width="100"
-        />
+        /> -->
       </div>
       <!-- <h2> - Clima</h2> -->
       <v-spacer></v-spacer>
