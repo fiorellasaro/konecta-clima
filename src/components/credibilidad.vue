@@ -15,7 +15,7 @@
       :striped="striped"
       :top="top"
       :value="value"
-    ></v-progress-linear> -->
+    ></v-progress-linear>-->
     <transition name="fade" mode="out-in">
       <!-- <p v-if="show">hola</p> -->
       <v-form ref="form" v-if="value==0" key="1" class="height">
@@ -29,7 +29,9 @@
           active-class="teal--text text--accent-4"
           :rules="[v => !!v || 'Selecciona una opción']"
         >
-          <v-chip v-for="size in sizes" :key="size" :value="size" @click="countProgress">{{ size }}</v-chip>
+          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress">
+            <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
+          </v-chip>
         </v-chip-group>
 
         <v-row class="justify-space-between mx-3">
@@ -49,7 +51,9 @@
           :rules="[v => !!v || 'Selecciona una opción']"
           required
         >
-          <v-chip v-for="size in sizes" :key="size" :value="size" @click="countProgress">{{ size }}</v-chip>
+          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress">
+             <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
+          </v-chip>
         </v-chip-group>
 
         <v-row class="justify-space-between mx-3">
@@ -69,7 +73,9 @@
           :rules="[v => !!v || 'Selecciona una opción']"
           required
         >
-          <v-chip v-for="size in sizes" :key="size" :value="size" @click="countProgress">{{ size }}</v-chip>
+          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress">
+            <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
+          </v-chip>
         </v-chip-group>
 
         <v-row class="justify-space-between mx-3">
@@ -90,7 +96,9 @@
           :rules="[v => !!v || 'Selecciona una opción']"
           required
         >
-          <v-chip v-for="size in sizes" :key="size" :value="size" @click="countProgress">{{ size }}</v-chip>
+          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress">
+             <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
+          </v-chip>
         </v-chip-group>
 
         <v-row class="justify-space-between mx-3">
@@ -111,7 +119,9 @@
           :rules="[v => !!v || 'Selecciona una opción']"
           required
         >
-          <v-chip v-for="size in sizes" :key="size" :value="size" @click="countProgress">{{ size }}</v-chip>
+          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress">
+             <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
+          </v-chip>
         </v-chip-group>
 
         <v-row class="justify-space-between mx-3">
@@ -132,7 +142,9 @@
           :rules="[v => !!v || 'Selecciona una opción']"
           required
         >
-          <v-chip v-for="size in sizes" :key="size" :value="size" @click="countProgress">{{ size }}</v-chip>
+          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress">
+             <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
+          </v-chip>
         </v-chip-group>
 
         <v-row class="justify-space-between mx-3">
@@ -153,7 +165,9 @@
           :rules="[v => !!v || 'Selecciona una opción']"
           required
         >
-          <v-chip v-for="size in sizes" :key="size" :value="size" @click="countProgress">{{ size }}</v-chip>
+          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress">
+             <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
+          </v-chip>
         </v-chip-group>
 
         <v-row class="justify-space-between mx-3">
@@ -174,7 +188,9 @@
           :rules="[v => !!v || 'Selecciona una opción']"
           required
         >
-          <v-chip v-for="size in sizes" :key="size" :value="size" @click="countProgress">{{ size }}</v-chip>
+          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress">
+            <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
+          </v-chip>
         </v-chip-group>
 
         <v-row class="justify-space-between mx-3">
@@ -194,7 +210,9 @@
           :rules="[v => !!v || 'Selecciona una opción']"
           required
         >
-          <v-chip v-for="size in sizes" :key="size" :value="size" @click="countProgress">{{ size }}</v-chip>
+          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress">
+             <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
+          </v-chip>
         </v-chip-group>
 
         <v-row class="justify-space-between mx-3">
@@ -215,7 +233,9 @@
           :rules="[v => !!v || 'Selecciona una opción']"
           required
         >
-          <v-chip v-for="size in sizes" :key="size" :value="size" @click="countProgress">{{ size }}</v-chip>
+          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress">
+             <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
+          </v-chip>
         </v-chip-group>
 
         <v-row class="justify-space-between mx-3">
@@ -234,7 +254,9 @@
           :rules="[v => !!v || 'Selecciona una opción']"
           required
         >
-          <v-chip v-for="size in sizes" :key="size" :value="size" @click="countProgress">{{ size }}</v-chip>
+          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress">
+             <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
+          </v-chip>
         </v-chip-group>
 
         <v-row class="justify-space-between mx-3">
@@ -255,7 +277,9 @@
           :rules="[v => !!v || 'Selecciona una opción']"
           required
         >
-          <v-chip v-for="size in sizes" :key="size" :value="size" @click="countProgress">{{ size }}</v-chip>
+          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress">
+             <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
+          </v-chip>
         </v-chip-group>
 
         <v-row class="justify-space-between mx-3">
@@ -276,7 +300,9 @@
           :rules="[v => !!v || 'Selecciona una opción']"
           required
         >
-          <v-chip v-for="size in sizes" :key="size" :value="size" @click="countProgress">{{ size }}</v-chip>
+          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress">
+             <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
+          </v-chip>
         </v-chip-group>
 
         <v-row class="justify-space-between mx-3">
@@ -297,7 +323,9 @@
           :rules="[v => !!v || 'Selecciona una opción']"
           required
         >
-          <v-chip v-for="size in sizes" :key="size" :value="size" @click="countProgress">{{ size }}</v-chip>
+          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress">
+             <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
+          </v-chip>
         </v-chip-group>
 
         <v-row class="justify-space-between mx-3">
@@ -318,7 +346,9 @@
           :rules="[v => !!v || 'Selecciona una opción']"
           required
         >
-          <v-chip v-for="size in sizes" :key="size" :value="size" @click="countProgress">{{ size }}</v-chip>
+          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress">
+             <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
+          </v-chip>
         </v-chip-group>
 
         <v-row class="justify-space-between mx-3">
@@ -609,7 +639,14 @@ export default {
     crediInte14: "",
     crediInte15: "",
 
-    sizes: ["1", "2", "3", "4", "5"],
+    // sizes: ["1", "2", "3", "4", "5"],
+    sizes: [
+      ["1", "mdi-emoticon-cry-outline"],
+      ["2", "mdi-emoticon-sad-outline"],
+      ["3", "mdi-emoticon-neutral-outline"],
+      ["4", "mdi-emoticon-happy-outline"],
+      ["5", "mdi-emoticon-excited-outline"]
+    ],
 
     // absolute: false,
     // active: true,
@@ -636,20 +673,31 @@ export default {
         let valor = this.value + 6.5;
         this.value = parseFloat(valor.toFixed(2));
         this.$emit("countProgress", this.value);
-       // console.log(this.value);
+        // console.log(this.value);
       }
     },
     countUnprogress() {
       let valor = this.value - 6.5;
       this.value = parseFloat(valor.toFixed(2));
       this.$emit("countUnprogress", this.value);
-     // console.log(this.value);
+      // console.log(this.value);
     }
   }
 };
 </script>
 
 <style >
+
+.v-chip-group .v-slide-group__content{
+    justify-content: space-between !important;
+}
+.v-chip-group .v-chip {
+    margin: 0 !important;
+}
+
+.theme--light.v-chip:not(.v-chip--active){
+    background: white !important;
+}
 .height {
   height: 360px !important;
 }
