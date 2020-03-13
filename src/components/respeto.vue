@@ -1,30 +1,14 @@
 <template>
   <div class="containerCred">
-    <!-- <v-progress-linear
-      :active="active"
-      :background-opacity="opacity"
-      :bottom="bottom"
-      :buffer-value="buffer"
-      :height="height"
-      color="teal"
-      style="border-radius: 100px;"
-      :indeterminate="indeterminate"
-      :query="query"
-      :rounded="rounded"
-      :stream="stream"
-      :striped="striped"
-      :top="top"
-      :value="value"
-    ></v-progress-linear>-->
     <transition name="fade" mode="out-in">
       <!-- <p v-if="show">hola</p> -->
       <v-form ref="form" v-if="value==0" key="1" class="height">
         <p
           class="text-center title mb-0"
-        >Los superiores inmediatos me mantienen informado acerca de cosas y cambios importantes</p>
+        >Se me ofrece capacitación y/o entrenamiento con el objetivo de promover mi desarrollo profesional</p>
 
         <v-chip-group
-          v-model="credibCom1"
+          v-model="resApro16"
           class="pt-6 chip-container"
           active-class="teal--text text--accent-4"
           :rules="[v => !!v || 'Selecciona una opción']"
@@ -39,13 +23,13 @@
           <p class="body-2 pt-2 text-end" style="width: 75px">Muy de acuerdo</p>
         </v-row>
       </v-form>
-      <v-form ref="form" v-if="value==6.5" key="2" class="height">
+      <v-form ref="form" v-if="value==7" key="2" class="height">
         <p
           class="text-center title mb-0"
-        >Los superiores inmediatos comunican claramente qué se espera de nuestro trabajo</p>
+        >Me dan los recursos, herramientas y equipos para hacer mi trabajo</p>
 
         <v-chip-group
-          v-model="credibCom2"
+          v-model="resApro17"
           class="pt-6 chip-container"
           active-class="teal--text text--accent-4"
           :rules="[v => !!v || 'Selecciona una opción']"
@@ -61,13 +45,13 @@
           <p class="body-2 pt-2 text-end" style="width: 75px">Muy de acuerdo</p>
         </v-row>
       </v-form>
-      <v-form ref="form" v-if="value==13" key="3" class="height">
+      <v-form ref="form" v-if="value==14" key="3" class="height">
         <p
           class="text-center title mb-0"
-        >Puedo hacer cualquier pregunta razonable a los superiores inmediatos y recibir una respuesta directa</p>
+        >Los superiores inmediatos muestran aprecio y reconocimiento por el buen trabajo y por el esfuerzo extra</p>
 
         <v-chip-group
-          v-model="credibCom3"
+          v-model="resApro18"
           class="pt-6 chip-container"
           active-class="teal--text text--accent-4"
           :rules="[v => !!v || 'Selecciona una opción']"
@@ -84,13 +68,13 @@
         </v-row>
       </v-form>
 
-      <v-form ref="form" v-if="value==19.5" key="4" class="height">
+      <v-form ref="form" v-if="value==21" key="4" class="height">
         <p
           class="text-center title mb-0"
-        >Los superiores inmediatos son accesibles, es fácil hablar con ellos</p>
+        >Los superiores inmediatos reconocen que pueden cometerse errores involuntarios en el trabajo</p>
 
         <v-chip-group
-          v-model="credibCom4"
+          v-model="resApro19"
           class="pt-6 chip-container"
           active-class="teal--text text--accent-4"
           :rules="[v => !!v || 'Selecciona una opción']"
@@ -107,13 +91,13 @@
         </v-row>
       </v-form>
 
-      <v-form ref="form" v-if="value==26" key="5" class="height">
+      <v-form ref="form" v-if="value==28" key="5" class="height">
         <p
           class="text-center title mb-0"
-        >Los superiores inmediatos son competentes en el manejo del negocio</p>
+        >Acá se reconoce a las personas que intentan nuevas y mejores maneras de hacer las cosas, independientemente del resultado</p>
 
         <v-chip-group
-          v-model="habGeren5"
+          v-model="resApro20"
           class="pt-6 chip-container"
           active-class="teal--text text--accent-4"
           :rules="[v => !!v || 'Selecciona una opción']"
@@ -130,13 +114,13 @@
         </v-row>
       </v-form>
 
-      <v-form ref="form" v-if="value==32.5" key="6" class="height">
+      <v-form ref="form" v-if="value==35" key="6" class="height">
         <p
           class="text-center title mb-0"
-        >Los superiores inmediatos hacen un buen trabajo en la asignación de labores y coordinación de las personas</p>
+        >Los superiores inmediatos incentivan, consideran y responden genuinamente a nuestras ideas y sugerencias</p>
 
         <v-chip-group
-          v-model="habGeren6"
+          v-model="resColab21"
           class="pt-6 chip-container"
           active-class="teal--text text--accent-4"
           :rules="[v => !!v || 'Selecciona una opción']"
@@ -153,13 +137,13 @@
         </v-row>
       </v-form>
 
-      <v-form ref="form" v-if="value==39" key="7" class="height">
+      <v-form ref="form" v-if="value==42" key="7" class="height">
         <p
           class="text-center title mb-0"
-        >Las personas que ingresan a la organización encajan bien con nuestra cultura</p>
+        >Los superiores inmediatos involucran a las personas en decisiones relacionadas a su trabajo o a su ambiente de trabajo</p>
 
         <v-chip-group
-          v-model="habGeren7"
+          v-model="resColab22"
           class="pt-6 chip-container"
           active-class="teal--text text--accent-4"
           :rules="[v => !!v || 'Selecciona una opción']"
@@ -176,13 +160,13 @@
         </v-row>
       </v-form>
 
-      <v-form ref="form" v-if="value==45.5" key="8" class="height">
+      <v-form ref="form" v-if="value==49" key="8" class="height">
         <p
           class="text-center title mb-0"
-        >Los superiores inmediatos confían en que las personas harán un buen trabajo sin tener que estar supervisándolos</p>
+        >Este es un lugar físicamente seguro donde trabajar</p>
 
         <v-chip-group
-          v-model="habGeren8"
+          v-model="resIn23"
           class="pt-6 chip-container"
           active-class="teal--text text--accent-4"
           :rules="[v => !!v || 'Selecciona una opción']"
@@ -198,13 +182,13 @@
           <p class="body-2 pt-2 text-end" style="width: 75px">Muy de acuerdo</p>
         </v-row>
       </v-form>
-      <v-form ref="form" v-if="value==52" key="9" class="height">
+      <v-form ref="form" v-if="value==56" key="9" class="height">
         <p
           class="text-center title mb-0"
-        >Las personas son responsables de cumplir con su trabajo adecuadamente</p>
+        >Este es un lugar psicológica y emocionalmente saludable donde trabajar</p>
 
         <v-chip-group
-          v-model="habGeren9"
+          v-model="resIn24"
           class="pt-6 chip-container"
           active-class="teal--text text--accent-4"
           :rules="[v => !!v || 'Selecciona una opción']"
@@ -221,13 +205,13 @@
         </v-row>
       </v-form>
 
-      <v-form ref="form" v-if="value==58.5" key="10" class="height">
+      <v-form ref="form" v-if="value==63" key="10" class="height">
         <p
           class="text-center title mb-0"
-        >Los superiores inmediatos tienen una visión clara de hacia dónde va la organización y qué hacer para lograrlo</p>
+        >La infraestructura e instalaciones de la organización contribuyen a crear un buen ambiente de trabajo</p>
 
         <v-chip-group
-          v-model="habGeren10"
+          v-model="resIn25"
           class="pt-6 chip-container"
           active-class="teal--text text--accent-4"
           :rules="[v => !!v || 'Selecciona una opción']"
@@ -244,11 +228,11 @@
         </v-row>
       </v-form>
 
-      <v-form ref="form" v-if="value==65" key="11" class="height">
-        <p class="text-center title mb-0">Los superiores inmediatos cumplen sus promesas</p>
+      <v-form ref="form" v-if="value==70" key="11" class="height">
+        <p class="text-center title mb-0">Puedo tomar tiempo libre, de forma coordinada, para atender asuntos personales de importancia</p>
 
         <v-chip-group
-          v-model="crediInte11"
+          v-model="resIn26"
           class="pt-6 chip-container"
           active-class="teal--text text--accent-4"
           :rules="[v => !!v || 'Selecciona una opción']"
@@ -265,13 +249,13 @@
         </v-row>
       </v-form>
 
-      <v-form ref="form" v-if="value==71.5" key="12" class="height">
+      <v-form ref="form" v-if="value==77" key="12" class="height">
         <p
           class="text-center title mb-0"
-        >Las palabras de los superiores inmediatos coinciden con sus acciones</p>
+        >Aquí se fomenta que las personas equilibren su vida de trabajo y su vida personal</p>
 
         <v-chip-group
-          v-model="crediInte12"
+          v-model="resIn27"
           class="pt-6 chip-container"
           active-class="teal--text text--accent-4"
           :rules="[v => !!v || 'Selecciona una opción']"
@@ -288,13 +272,13 @@
         </v-row>
       </v-form>
 
-      <v-form ref="form" v-if="value==78" key="13" class="height">
+      <v-form ref="form" v-if="value==84" key="13" class="height">
         <p
           class="text-center title mb-0"
-        >Creo que aquí se haría todo lo posible antes de tener que hacer una reducción de personal</p>
+        >Los superiores inmediatos demuestran un interés sincero en mí como persona, no sólo como empleado</p>
 
         <v-chip-group
-          v-model="crediInte13"
+          v-model="resIn28"
           class="pt-6 chip-container"
           active-class="teal--text text--accent-4"
           :rules="[v => !!v || 'Selecciona una opción']"
@@ -311,42 +295,24 @@
         </v-row>
       </v-form>
 
-      <v-form ref="form" v-if="value==84.5" key="14" class="height">
+      <v-form ref="form" v-if="value==91" key="14" class="height">
         <p
           class="text-center title mb-0"
-        >Nuestros ejecutivos representan plenamente los valores de nuestra organización</p>
+        >Tenemos beneficios especiales y únicos en esta organización (no sólo económicos)</p>
 
         <v-chip-group
-          v-model="crediInte14"
+          v-model="resIn29"
           class="pt-6 chip-container"
           active-class="teal--text text--accent-4"
           :rules="[v => !!v || 'Selecciona una opción']"
           required
         >
-          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress">
-            <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
-          </v-chip>
-        </v-chip-group>
-
-        <v-row class="justify-space-between mx-3">
-          <p class="body-2 pt-2 text-start" style="width: 75px">Nada de acuerdo</p>
-          <p class="body-2 pt-2 text-end" style="width: 75px">Muy de acuerdo</p>
-        </v-row>
-      </v-form>
-
-      <v-form ref="form" v-if="value==91" key="15" class="height">
-        <p
-          class="text-center title mb-0"
-        >Los superiores inmediatos conducen el negocio de manera ética y honesta</p>
-
-        <v-chip-group
-          v-model="crediInte15"
-          class="pt-6 chip-container"
-          active-class="teal--text text--accent-4"
-          :rules="[v => !!v || 'Selecciona una opción']"
-          required
-        >
-          <v-chip v-for="size in sizes" :key="size[0]" :value="size[0]" @click="countProgress(size[0])">
+          <v-chip
+            v-for="size in sizes"
+            :key="size[0]"
+            :value="size[0]"
+            @click="countProgress(size[0])"
+          >
             <v-icon color="#FFCA33" style="font-size: 35px;">{{size[1]}}</v-icon>
           </v-chip>
         </v-chip-group>
@@ -375,13 +341,13 @@
         light
         large
         color="#00B8AD"
-        v-bind:disabled="credibCom1==''"
+        v-bind:disabled="resApro16==''"
         @click="countProgress"
       >
         <v-icon>mdi-arrow-right-bold</v-icon>
       </v-btn>
     </div>
-    <div class="space-button" v-if="value==6.5">
+    <div class="space-button" v-if="value==7">
       <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
         <v-icon>mdi-arrow-left-bold</v-icon>
       </v-btn>
@@ -391,13 +357,13 @@
         light
         large
         color="#00B8AD"
-        v-bind:disabled="credibCom2==''"
+        v-bind:disabled="resApro17==''"
         @click="countProgress"
       >
         <v-icon>mdi-arrow-right-bold</v-icon>
       </v-btn>
     </div>
-    <div class="space-button" v-if="value==13">
+    <div class="space-button" v-if="value==14">
       <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
         <v-icon>mdi-arrow-left-bold</v-icon>
       </v-btn>
@@ -407,47 +373,14 @@
         light
         large
         color="#00B8AD"
-        v-bind:disabled="credibCom3==''"
-        @click="countProgress"
-      >
-        <v-icon>mdi-arrow-right-bold</v-icon>
-      </v-btn>
-    </div>
-
-    <div class="space-button" v-if="value==19.5">
-      <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
-        <v-icon>mdi-arrow-left-bold</v-icon>
-      </v-btn>
-      <v-btn
-        class="white--text"
-        fab
-        light
-        large
-        color="#00B8AD"
-        v-bind:disabled="credibCom4==''"
-        @click="countProgress"
-      >
-        <v-icon>mdi-arrow-right-bold</v-icon>
-      </v-btn>
-    </div>
-    <div class="space-button" v-if="value==26">
-      <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
-        <v-icon>mdi-arrow-left-bold</v-icon>
-      </v-btn>
-      <v-btn
-        class="white--text"
-        fab
-        light
-        large
-        color="#00B8AD"
-        v-bind:disabled="habGeren5==''"
+        v-bind:disabled="resApro18==''"
         @click="countProgress"
       >
         <v-icon>mdi-arrow-right-bold</v-icon>
       </v-btn>
     </div>
 
-    <div class="space-button" v-if="value==32.5">
+    <div class="space-button" v-if="value==21">
       <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
         <v-icon>mdi-arrow-left-bold</v-icon>
       </v-btn>
@@ -457,13 +390,13 @@
         light
         large
         color="#00B8AD"
-        v-bind:disabled="habGeren6==''"
+        v-bind:disabled="resApro19==''"
         @click="countProgress"
       >
         <v-icon>mdi-arrow-right-bold</v-icon>
       </v-btn>
     </div>
-    <div class="space-button" v-if="value==39">
+    <div class="space-button" v-if="value==28">
       <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
         <v-icon>mdi-arrow-left-bold</v-icon>
       </v-btn>
@@ -473,31 +406,14 @@
         light
         large
         color="#00B8AD"
-        v-bind:disabled="habGeren7==''"
-        @click="countProgress"
-      >
-        <v-icon>mdi-arrow-right-bold</v-icon>
-      </v-btn>
-    </div>
-
-    <div class="space-button" v-if="value==45.5">
-      <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
-        <v-icon>mdi-arrow-left-bold</v-icon>
-      </v-btn>
-      <v-btn
-        class="white--text"
-        fab
-        light
-        large
-        color="#00B8AD"
-        v-bind:disabled="habGeren8==''"
+        v-bind:disabled="resApro20==''"
         @click="countProgress"
       >
         <v-icon>mdi-arrow-right-bold</v-icon>
       </v-btn>
     </div>
 
-    <div class="space-button" v-if="value==52">
+    <div class="space-button" v-if="value==35">
       <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
         <v-icon>mdi-arrow-left-bold</v-icon>
       </v-btn>
@@ -507,13 +423,13 @@
         light
         large
         color="#00B8AD"
-        v-bind:disabled="habGeren9==''"
+        v-bind:disabled="resColab21==''"
         @click="countProgress"
       >
         <v-icon>mdi-arrow-right-bold</v-icon>
       </v-btn>
     </div>
-    <div class="space-button" v-if="value==58.5">
+    <div class="space-button" v-if="value==42">
       <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
         <v-icon>mdi-arrow-left-bold</v-icon>
       </v-btn>
@@ -523,46 +439,14 @@
         light
         large
         color="#00B8AD"
-        v-bind:disabled="habGeren10==''"
-        @click="countProgress"
-      >
-        <v-icon>mdi-arrow-right-bold</v-icon>
-      </v-btn>
-    </div>
-    <div class="space-button" v-if="value==65">
-      <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
-        <v-icon>mdi-arrow-left-bold</v-icon>
-      </v-btn>
-      <v-btn
-        class="white--text"
-        fab
-        light
-        large
-        color="#00B8AD"
-        v-bind:disabled="crediInte11==''"
-        @click="countProgress"
-      >
-        <v-icon>mdi-arrow-right-bold</v-icon>
-      </v-btn>
-    </div>
-    <div class="space-button" v-if="value==71.5">
-      <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
-        <v-icon>mdi-arrow-left-bold</v-icon>
-      </v-btn>
-      <v-btn
-        class="white--text"
-        fab
-        light
-        large
-        color="#00B8AD"
-        v-bind:disabled="crediInte12==''"
+        v-bind:disabled="resColab22==''"
         @click="countProgress"
       >
         <v-icon>mdi-arrow-right-bold</v-icon>
       </v-btn>
     </div>
 
-    <div class="space-button" v-if="value==78">
+    <div class="space-button" v-if="value==49">
       <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
         <v-icon>mdi-arrow-left-bold</v-icon>
       </v-btn>
@@ -572,14 +456,14 @@
         light
         large
         color="#00B8AD"
-        v-bind:disabled="crediInte13==''"
+        v-bind:disabled="resIn23==''"
         @click="countProgress"
       >
         <v-icon>mdi-arrow-right-bold</v-icon>
       </v-btn>
     </div>
 
-    <div class="space-button" v-if="value==84.5">
+    <div class="space-button" v-if="value==56">
       <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
         <v-icon>mdi-arrow-left-bold</v-icon>
       </v-btn>
@@ -589,7 +473,72 @@
         light
         large
         color="#00B8AD"
-        v-bind:disabled="crediInte14==''"
+        v-bind:disabled="resIn24==''"
+        @click="countProgress"
+      >
+        <v-icon>mdi-arrow-right-bold</v-icon>
+      </v-btn>
+    </div>
+    <div class="space-button" v-if="value==63">
+      <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
+        <v-icon>mdi-arrow-left-bold</v-icon>
+      </v-btn>
+      <v-btn
+        class="white--text"
+        fab
+        light
+        large
+        color="#00B8AD"
+        v-bind:disabled="resIn25==''"
+        @click="countProgress"
+      >
+        <v-icon>mdi-arrow-right-bold</v-icon>
+      </v-btn>
+    </div>
+    <div class="space-button" v-if="value==70">
+      <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
+        <v-icon>mdi-arrow-left-bold</v-icon>
+      </v-btn>
+      <v-btn
+        class="white--text"
+        fab
+        light
+        large
+        color="#00B8AD"
+        v-bind:disabled="resIn26==''"
+        @click="countProgress"
+      >
+        <v-icon>mdi-arrow-right-bold</v-icon>
+      </v-btn>
+    </div>
+    <div class="space-button" v-if="value==77">
+      <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
+        <v-icon>mdi-arrow-left-bold</v-icon>
+      </v-btn>
+      <v-btn
+        class="white--text"
+        fab
+        light
+        large
+        color="#00B8AD"
+        v-bind:disabled="resIn27==''"
+        @click="countProgress"
+      >
+        <v-icon>mdi-arrow-right-bold</v-icon>
+      </v-btn>
+    </div>
+
+    <div class="space-button" v-if="value==84">
+      <v-btn class="white--text" fab light large color="#00B8AD" @click="countUnprogress">
+        <v-icon>mdi-arrow-left-bold</v-icon>
+      </v-btn>
+      <v-btn
+        class="white--text"
+        fab
+        light
+        large
+        color="#00B8AD"
+        v-bind:disabled="resIn28==''"
         @click="countProgress"
       >
         <v-icon>mdi-arrow-right-bold</v-icon>
@@ -606,7 +555,7 @@
         light
         large
         color="#00B8AD"
-        v-bind:disabled="crediInte15==''"
+        v-bind:disabled="resIn29==''"
         @click="countProgress"
       >
         <v-icon>mdi-arrow-right-bold</v-icon>
@@ -619,24 +568,23 @@
 import firebase from "firebase";
 
 export default {
-  name: "credibilidad",
+  name: "respeto",
 
   data: () => ({
-    credibCom1: "",
-    credibCom2: "",
-    credibCom3: "",
-    credibCom4: "",
-    habGeren5: "",
-    habGeren6: "",
-    habGeren7: "",
-    habGeren8: "",
-    habGeren9: "",
-    habGeren10: "",
-    crediInte11: "",
-    crediInte12: "",
-    crediInte13: "",
-    crediInte14: "",
-    crediInte15: "",
+    resApro16: "",
+    resApro17: "",
+    resApro18: "",
+    resApro19: "",
+    resApro20: "",
+    resColab21: "",
+    resColab22: "",
+    resIn23: "",
+    resIn24: "",
+    resIn25: "",
+    resIn26: "",
+    resIn27: "",
+    resIn28: "",
+    resIn29: "",
 
     sizes: [
       ["1", "mdi-emoticon-cry-outline"],
@@ -652,44 +600,44 @@ export default {
       if (this.value == 91) {
         // this.value = 100;
         // this.$emit("countProgress", this.value);
-        this.crediInte15 = value
-        this.postCredibilidad();
+        this.resIn29 = value;
+        this.postRespeto();
         //firebase
       } else {
-        let valor = this.value + 6.5;
+        let valor = this.value + 7;
         this.value = parseFloat(valor.toFixed(2));
         this.$emit("countProgress", this.value);
         // console.log(this.value);
       }
     },
     countUnprogress() {
-      let valor = this.value - 6.5;
+      let valor = this.value - 7;
       this.value = parseFloat(valor.toFixed(2));
       this.$emit("countUnprogress", this.value);
       // console.log(this.value);
     },
-    postCredibilidad() {
+    postRespeto() {
       this.value = 100;
-      console.log(this.crediInte15);
+      console.log(this.resIn29);
 
-      let credibilidad = {
-        credibCom1: this.credibCom1,
-        credibCom2: this.credibCom2,
-        credibCom3: this.credibCom3,
-        credibCom4: this.credibCom4,
-        habGeren5: this.habGeren5,
-        habGeren6: this.habGeren6,
-        habGeren7: this.habGeren7,
-        habGeren8: this.habGeren8,
-        habGeren9: this.habGeren9,
-        habGeren10: this.habGeren10,
-        crediInte11: this.crediInte11,
-        crediInte12: this.crediInte12,
-        crediInte13: this.crediInte13,
-        crediInte14: this.crediInte14,
-        crediInte15: this.crediInte15
+      let respeto = {
+        resApro16: this.resApro16,
+        resApro17: this.resApro17,
+        resApro18: this.resApro18,
+        resApro19: this.resApro19,
+        resApro20: this.resApro20,
+        resColab21: this.resColab21,
+        resColab22: this.resColab22,
+        resIn23: this.resIn23,
+        resIn24: this.resIn24,
+        resIn25: this.resIn25,
+        resIn26: this.resIn26,
+        resIn27: this.resIn27,
+        resIn28: this.resIn28,
+        resIn29: this.resIn29
       };
-      let credibilidadFull = JSON.parse(JSON.stringify(credibilidad));
+
+      let respetoFull = JSON.parse(JSON.stringify(respeto));
       // const ubicacionInicialKey = firebase
       //   .database()
       //   .ref("UBICACION_INICIAL")
@@ -697,9 +645,9 @@ export default {
 
       firebase
         .database()
-        .ref("CREDIBILIDAD")
-        .child("ABCDE") //codigo 
-        .set(credibilidadFull);
+        .ref("RESPETO")
+        .child("ABCDE") //codigo
+        .set(respetoFull);
 
       this.$emit("countProgress", this.value);
     }

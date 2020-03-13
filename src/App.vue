@@ -10,7 +10,7 @@
           src="../src/assets/k-blanco.png"
           width="40"
         />
-       <b color="white" class="m-0" style="font-size: 25px;">lima</b> 
+        <b color="white" class="m-0" style="font-size: 25px;">lima</b>
       </div>
       <!-- <h2> - Clima</h2> -->
       <v-spacer></v-spacer>
@@ -102,9 +102,15 @@
         </div>
 
         <credibilidad
+          v-if="valueCredibilidad!=100"
           v-on:countProgress="countCredibilidad($event)"
           v-on:countUnprogress="uncountCredibilidad($event)"
         ></credibilidad>
+        <respeto
+          v-else-if="valueRespeto!=100"
+          v-on:countProgress="countRespeto($event)"
+          v-on:countUnprogress="uncountRespeto($event)"
+        ></respeto>
       </div>
       <cardLogin v-else v-on:validate="getEnterState($event)" />
     </v-content>
@@ -115,6 +121,7 @@
 import cardLogin from "./components/cardLogin";
 
 import credibilidad from "./components/credibilidad";
+import respeto from "./components/respeto";
 
 export default {
   name: "App",
@@ -122,7 +129,8 @@ export default {
   components: {
     cardLogin,
 
-    credibilidad
+    credibilidad,
+    respeto
   },
 
   data: () => ({
@@ -160,6 +168,14 @@ export default {
     uncountCredibilidad(count) {
       this.valueCredibilidad = count;
       console.log(this.valueCredibilidad);
+    },
+    countRespeto(count) {
+      this.valueRespeto = count;
+      console.log(this.valueRespeto);
+    },
+    uncountRespeto(count) {
+      this.valueRespeto = count;
+      console.log(this.valueRespeto);
     }
   }
 };
@@ -167,6 +183,9 @@ export default {
 
 
 <style >
+.v-progress-linear {
+  width: 19% !important;
+}
 .container {
   width: 50% !important;
   display: flex;
