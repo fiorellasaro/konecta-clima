@@ -18,7 +18,7 @@
 
     <v-content>
       <div class="container" v-if="enterState">
-        <div class="progressContainer">
+        <div v-if="valueCamaraderia!=100" class="progressContainer">
           <v-progress-linear
             :active="active"
             :background-opacity="opacity"
@@ -100,17 +100,49 @@
             :value="valueCamaraderia"
           ></v-progress-linear>
         </div>
+        <div v-else class="align-final">
+          <h1 class="text-center">¡Gracias por participar!</h1>
+        <v-img
+          alt="Konecta Name"
+          class="shrink"
+          contain
+          transition="scale-transition"
+          src="../src/assets/weather.png"
+          width="200"
+        />
+
+        </div>
 
         <credibilidad
           v-if="valueCredibilidad!=100"
           v-on:countProgress="countCredibilidad($event)"
           v-on:countUnprogress="uncountCredibilidad($event)"
         ></credibilidad>
+        <!-- <formSmall
+          v-if="valueCredibilidad!=100"
+          v-on:countProgress="countCredibilidad($event)"
+          v-on:countUnprogress="uncountCredibilidad($event)"
+        ></formSmall>-->
         <respeto
           v-else-if="valueRespeto!=100"
           v-on:countProgress="countRespeto($event)"
           v-on:countUnprogress="uncountRespeto($event)"
         ></respeto>
+        <imparcialidad
+          v-else-if="valueImparcialidad!=100"
+          v-on:countProgress="countImparcialidad($event)"
+          v-on:countUnprogress="uncountImparcialidad($event)"
+        ></imparcialidad>
+        <orgullo
+          v-else-if="valueOrgullo!=100"
+          v-on:countProgress="countOrgullo($event)"
+          v-on:countUnprogress="uncountOrgullo($event)"
+        ></orgullo>
+        <camaraderiaPlus
+          v-else-if="valueCamaraderia!=100"
+          v-on:countProgress="countCamaraderiaPlus($event)"
+          v-on:countUnprogress="uncountCamaraderiaPlus($event)"
+        ></camaraderiaPlus>
       </div>
       <cardLogin v-else v-on:validate="getEnterState($event)" />
     </v-content>
@@ -122,15 +154,23 @@ import cardLogin from "./components/cardLogin";
 
 import credibilidad from "./components/credibilidad";
 import respeto from "./components/respeto";
+import imparcialidad from "./components/imparcialidad";
+import orgullo from "./components/orgullo";
+import camaraderiaPlus from "./components/camaraderiaPlus";
+// import formSmall from "./components/formSmall";
 
 export default {
   name: "App",
 
   components: {
     cardLogin,
+    // formSmall,
 
     credibilidad,
-    respeto
+    respeto,
+    imparcialidad,
+    orgullo,
+    camaraderiaPlus
   },
 
   data: () => ({
@@ -176,6 +216,30 @@ export default {
     uncountRespeto(count) {
       this.valueRespeto = count;
       console.log(this.valueRespeto);
+    },
+    countImparcialidad(count) {
+      this.valueImparcialidad = count;
+      console.log(this.valueImparcialidad);
+    },
+    uncountImparcialidad(count) {
+      this.valueImparcialidad = count;
+      console.log(this.valueImparcialidad);
+    },
+    countOrgullo(count) {
+      this.valueOrgullo = count;
+      console.log(this.valueOrgullo);
+    },
+    uncountOrgullo(count) {
+      this.valueOrgullo = count;
+      console.log(this.valueOrgullo);
+    },
+    countCamaraderiaPlus(count) {
+      this.valueCamaraderia = count;
+      console.log(this.valueCamaraderia);
+    },
+    uncountCamaraderiaPlus(count) {
+      this.valueCamaraderia = count;
+      console.log(this.valueCamaraderia);
     }
   }
 };
@@ -202,6 +266,12 @@ export default {
   flex-direction: row;
   margin-bottom: 1.5em;
   margin-top: 0.5em;
+}
+
+.align-final{
+  display:flex;
+  align-items: center !important;
+  flex-direction: column;
 }
 
 @media (max-width: 767px) {
