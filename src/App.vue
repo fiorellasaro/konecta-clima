@@ -102,14 +102,8 @@
         </div>
         <div v-else class="align-final">
           <h1 class="text-center">¡Gracias por participar!</h1>
-        <v-img
-          alt="Konecta Name"
-          class="shrink"
-          contain
-          transition="scale-transition"
-          src="../src/assets/weather.png"
-          width="200"
-        />
+
+         <img src="../src/assets/weather.png" alt="weatherKonecta" class="width-200">
 
         </div>
 
@@ -272,6 +266,10 @@ export default {
   display:flex;
   align-items: center !important;
   flex-direction: column;
+}
+
+.width-200{
+  width: 200px;
 }
 
 @media (max-width: 767px) {
