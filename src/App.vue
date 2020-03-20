@@ -102,15 +102,14 @@
         </div>
         <div v-else class="align-final">
           <h1 class="text-center">¡Gracias por participar!</h1>
-        <v-img
-          alt="Konecta Name"
-          class="shrink"
-          contain
-          transition="scale-transition"
-          src="./assets/weather.png"
-          width="200"
-        />
-
+          <v-img
+            alt="Konecta weather"
+            class="shrink"
+            contain
+            transition="scale-transition"
+            src="./assets/weather.png"
+            width="200"
+          />
         </div>
 
         <credibilidad
@@ -144,7 +143,9 @@
           v-on:countUnprogress="uncountCamaraderiaPlus($event)"
         ></camaraderiaPlus>
       </div>
-      <cardLogin v-else v-on:validate="getEnterState($event)" />
+      <div v-else class="image-bg">
+        <cardLogin v-on:validate="getEnterState($event)" />
+      </div>
     </v-content>
   </v-app>
 </template>
@@ -268,8 +269,8 @@ export default {
   margin-top: 0.5em;
 }
 
-.align-final{
-  display:flex;
+.align-final {
+  display: flex;
   align-items: center !important;
   flex-direction: column;
 }
@@ -278,6 +279,20 @@ export default {
   .container {
     width: 100% !important;
   }
+}
+
+body {
+  background-image: url("./assets/fondo.png");
+}
+
+.image-bg {
+  background: url("./assets/fondo.png") no-repeat center center fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 </style>
 
